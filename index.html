@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Image Compressor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Compressor</h1>
+        <p class="subtitle">Fast, Private, Browser-Based</p>
+        
+        <div class="upload-section">
+            <input type="file" id="upload" accept="image/*">
+        </div>
+        
+        <div class="controls">
+            <label for="quality">Compression Quality: <span id="val">80</span>%</label>
+            <input type="range" id="quality" min="1" max="100" value="80">
+        </div>
+
+        <div class="preview-container">
+            <div class="preview-pane">
+                <h3>Original</h3>
+                <div class="img-box">
+                    <img id="originalPreview">
+                </div>
+                <p id="originalSize">-</p>
+            </div>
+            <div class="preview-pane">
+                <h3>Compressed</h3>
+                <div class="img-box">
+                    <img id="compressedPreview">
+                </div>
+                <p id="compressedSize">-</p>
+            </div>
+        </div>
+
+        <button id="downloadBtn">Download Compressed Image</button>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
