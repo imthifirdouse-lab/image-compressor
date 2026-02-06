@@ -20,11 +20,40 @@ body {
 
 .upload-section { margin-bottom: 20px; }
 
+/* --- UPDATED CONTROLS --- */
 .controls {
     background: #f8f9fa;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spaces out format and quality groups */
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+}
+
+select, input[type="range"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+select {
+    cursor: pointer;
+    background-color: white;
 }
 
 /* --- THE PREVIEW FLEXBOX --- */
@@ -32,18 +61,18 @@ body {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Stacks on small screens */
+    flex-wrap: wrap; 
 }
 
 .preview-pane {
     flex: 1;
-    min-width: 250px;
+    min-width: 280px;
 }
 
 .img-box {
     border: 2px dashed #ddd;
     border-radius: 8px;
-    height: 250px;
+    height: 300px; /* Slightly increased height for better visibility */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,6 +98,8 @@ button {
     cursor: pointer;
     font-size: 1rem;
     transition: 0.3s;
+    width: 100%; /* Makes button more prominent */
+    max-width: 300px;
 }
 
 button:hover { background: #218838; transform: translateY(-2px); }
